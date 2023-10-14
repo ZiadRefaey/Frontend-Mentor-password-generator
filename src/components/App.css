@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.heading-lg {
+  color: var(#e6e5ea);
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* Heading (L) */
+  font-family: JetBrains Mono;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.heading-m {
+  color: var(#e6e5ea);
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* Heading (M) */
+  font-family: JetBrains Mono;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.body {
+  color: var(#e6e5ea);
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* Body (M) */
+  font-family: JetBrains Mono;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
