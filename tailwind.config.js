@@ -10,6 +10,7 @@ export default {
         "custom-lg": "2rem",
       },
       colors: {
+        placeHolder: "#54535B",
         Black: "#18171F",
         Red: "#F64A4A",
         Orange: "#FB7C58",

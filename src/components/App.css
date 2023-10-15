@@ -85,7 +85,10 @@ body {
   background-color: #e6e5ea;
   cursor: pointer;
 }
-
+.slider::-webkit-slider-thumb:hover {
+  border: 2px solid #a4ffaf;
+  background-color: #14131b;
+}
 /*checbox styling*/
 input[type="checkbox"] {
   -webkit-appearance: none;
