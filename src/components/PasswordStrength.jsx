@@ -1,4 +1,5 @@
-export default function PasswordStrength() {
+import PasswordStrengthBars from "./PasswordStrengthBars";
+export default function PasswordStrength({ difficulty }) {
   return (
     <div className="w-full p-4 md:px-8 md:py-5 bg-Black flex items-center justify-between">
       <h3 className="text-custom-xs md:text-custom-sm text-Gray font-bold">
@@ -6,14 +7,9 @@ export default function PasswordStrength() {
       </h3>
       <div className="flex items-center justify-center gap-4">
         <p className="text-custom-sm md:text-custom-md text-offWhite font-bold">
-          MEDIUM
+          {difficulty}
         </p>
-        <div className="flex items-center justify-center gap-2">
-          <div className="w-[10px] h-7 border-solid border-2 border-Yellow bg-Yellow"></div>
-          <div className="w-[10px] h-7 border-solid border-2 border-Yellow bg-Yellow"></div>
-          <div className="w-[10px] h-7 border-solid border-2 border-Yellow bg-Yellow"></div>
-          <div className="w-[10px] h-7 border-solid border-2 border-offWhite"></div>
-        </div>
+        <PasswordStrengthBars difficulty={difficulty} />
       </div>
     </div>
   );

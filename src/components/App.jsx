@@ -18,12 +18,22 @@ const initialState = {
     hasNumber: false,
   },
   strength: 0,
+  difficulty: null,
 };
 function reducer(state, action) {
   switch (action.type) {
     case "newPassword":
       return {
         ...state,
+        difficulty:
+          state.strength === 1
+            ? "TOO WEAK"
+            : state.strength === 2
+            ? "WEAK"
+            : state.strength === 3
+            ? "MEDIUM"
+            : "STRONG",
+
         password: GeneratePassword({
           length: state.passwordLength,
           uppercase: state.passwordRules.hasUpper,
@@ -76,10 +86,10 @@ function reducer(state, action) {
   }
 }
 function App() {
-  const [{ password, passwordLength, passwordRules }, dispatch] = useReducer(
-    reducer,
-    initialState
-  );
+  const [
+    { password, passwordLength, passwordRules, strength, difficulty },
+    dispatch,
+  ] = useReducer(reducer, initialState);
 
   return (
     <>
@@ -89,8 +99,8 @@ function App() {
         <MainContent>
           <PasswordSlider passwordLength={passwordLength} dispatch={dispatch} />
           <PasswordRules passwordRules={passwordRules} dispatch={dispatch} />
-          <PasswordStrength />
-          <Footer dispatch={dispatch} />
+          <PasswordStrength difficulty={difficulty} />
+          <Footer dispatch={dispatch} strength={strength} />
         </MainContent>
       </main>
     </>
