@@ -1,9 +1,11 @@
 import copy from "../assets/images/icon-copy.svg";
-export default function Password() {
+export default function Password({ password }) {
   return (
     <div className="bg-darkGray w-full px-4 md:px-8 py-[19px] flex mb-6 justify-between gap-8">
       <input
+        disabled
         placeholder="PTx1f5DaFX"
+        value={password}
         className="text-custom-md md:text-custom-lg font-bold placeholder:font-bold text-offWhite bg-inherit placeholder:text-Gray placeholder:text-custom-md md:placeholder:text-custom-lg md:placeholder:text-3xl  max-w-[50%] md:max-w-[70%] outline-none"
       />
       <div className="flex">
