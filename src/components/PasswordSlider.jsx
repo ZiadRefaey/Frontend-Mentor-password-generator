@@ -11,7 +11,7 @@ export default function PasswordSlider({ passwordLength, dispatch }) {
       </div>
       <input
         type="range"
-        min="0"
+        min="1"
         max="20"
         value={passwordLength}
         className="slider"
