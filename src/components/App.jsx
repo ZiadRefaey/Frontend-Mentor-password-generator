@@ -10,16 +10,14 @@ import PasswordStrength from "./PasswordStrength";
 function App() {
   return (
     <>
-      <main className="">
+      <main className="m-auto max-w-[343px] md:max-w-[540px] md:flex items-center justify-center flex-col">
         <AppHeader />
         <Password />
         <MainContent>
           <PasswordSlider />
           <PasswordRules />
           <PasswordStrength />
-          <Footer>
-            <button>Generate</button>
-          </Footer>
+          <Footer />
         </MainContent>
       </main>
     </>
