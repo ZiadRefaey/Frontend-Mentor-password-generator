@@ -96,7 +96,7 @@ function App() {
       <main className="m-auto max-w-[343px] md:max-w-[540px] md:flex items-center justify-center flex-col">
         <AppHeader />
         <Password password={password} />
-        <MainContent>
+        <MainContent dispatch={dispatch}>
           <PasswordSlider passwordLength={passwordLength} dispatch={dispatch} />
           <PasswordRules passwordRules={passwordRules} dispatch={dispatch} />
           <PasswordStrength difficulty={difficulty} />

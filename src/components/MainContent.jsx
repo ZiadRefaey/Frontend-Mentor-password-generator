@@ -1,7 +1,13 @@
-export default function MainContent({ children }) {
+export default function MainContent({ dispatch, children }) {
   return (
-    <div className="px-4 py-5 md:p-8 bg-darkGray w-full flex items-center justify-center flex-col gap-8">
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        dispatch({ type: "newPassword" });
+      }}
+      className="px-4 py-5 md:p-8 bg-darkGray w-full flex items-center justify-center flex-col gap-8"
+    >
       {children}
-    </div>
+    </form>
   );
 }

@@ -14,7 +14,7 @@ export default function PasswordStrengthBars({ difficulty }) {
           { color: "#FB7C58", backgroundColor: "#FB7C58", key: 1 },
           { color: "#FB7C58", backgroundColor: "#FB7C58", key: 2 },
           { color: "#E6E5EA", backgroundColor: "inherit", key: 3 },
-          { color: "#E6E5EA", backgroundColor: "#inherit", key: 4 },
+          { color: "#E6E5EA", backgroundColor: "inherit", key: 4 },
         ];
       case "MEDIUM":
         return [
