@@ -42,6 +42,7 @@ function reducer(state, action) {
           numbers: state.passwordRules.hasNumber,
         }),
       };
+
     case "passwordLengthChange":
       return {
         ...state,
@@ -53,8 +54,8 @@ function reducer(state, action) {
         passwordRules: {
           ...state.passwordRules,
           hasUpper: action.payload,
-          strength: action.payload ? state.strength++ : state.strength--,
         },
+        strength: action.payload ? state.strength + 1 : state.strength - 1,
       };
     case "checkboxLowerCaseChange":
       return {
@@ -62,8 +63,8 @@ function reducer(state, action) {
         passwordRules: {
           ...state.passwordRules,
           hasLower: action.payload,
-          strength: action.payload ? state.strength++ : state.strength--,
         },
+        strength: action.payload ? state.strength + 1 : state.strength - 1,
       };
     case "checkboxSymbolsChange":
       return {
@@ -71,8 +72,8 @@ function reducer(state, action) {
         passwordRules: {
           ...state.passwordRules,
           hasSymbol: action.payload,
-          strength: action.payload ? state.strength++ : state.strength--,
         },
+        strength: action.payload ? state.strength + 1 : state.strength - 1,
       };
     case "checkboxNumbersChange":
       return {
@@ -80,8 +81,8 @@ function reducer(state, action) {
         passwordRules: {
           ...state.passwordRules,
           hasNumber: action.payload,
-          strength: action.payload ? state.strength++ : state.strength--,
         },
+        strength: action.payload ? state.strength + 1 : state.strength - 1,
       };
   }
 }
@@ -90,7 +91,6 @@ function App() {
     { password, passwordLength, passwordRules, strength, difficulty },
     dispatch,
   ] = useReducer(reducer, initialState);
-
   return (
     <>
       <main className="m-auto max-w-[343px] md:max-w-[540px] md:flex items-center justify-center flex-col">
